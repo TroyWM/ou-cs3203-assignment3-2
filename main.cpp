@@ -23,23 +23,38 @@ int main() {
 	std::vector<int> list;
 	int input = -1;
 	int mode = 0;
-	std::cout << "Add(1) or Mult(2): ";
-	std::cin >> mode;
-
-	std::cout << "Numbers please: /n";
+	int sum;
+	std::cout << "Adder: \n";
+	//std::cin >> mode;
 	while (input) {
 		std::cin >> input;
 		list.push_back(input);
 	}
-	int output;
-	switch (mode) {
-	case 1:
-		output = adder(list);
-		break;
-	case 2:
-		output = multer(list);
-	}
+	sum = adder(list);
+	std::cout << "Sum: ";
+	std::cout << sum;
+	std::cout << "\n";
 
-	std::cout << output;
+	int product;
+	list.clear();
+	input = -1;
+	std::cout << "Multiplier: \n";
+	while (input) {
+		std::cin >> input;
+		list.push_back(input);
+	}
+	product = multer(list);
+	std::cout << "Product: ";
+	std::cout << product;
+	std::cout << "\n";
+	//switch (mode) {
+	//case 1:
+	//	output = adder(list);
+	//	break;
+	//case 2:
+	//	output = multer(list);
+	//}
+	//std::cout << output;
+
 	return 0;
 }
