@@ -37,8 +37,8 @@ int main() {
 	int input = -1;
 	int mode = 0;
 	int sum;
-	std::cout << "Adder: \n";
 	//std::cin >> mode;
+	std::cout << "Input numbers, 0 to finish: \n";
 	while (input) {
 		std::cin >> input;
 		list.push_back(input);
@@ -47,19 +47,13 @@ int main() {
 	std::cout << "Sum: ";
 	std::cout << sum;
 	std::cout << "\n";
-
-	int product;
-	list.clear();
 	input = -1;
-	std::cout << "Multiplier: \n";
-	while (input) {
-		std::cin >> input;
-		list.push_back(input);
-	}
-	product = multer(list);
+	int product = multer(list);
 	std::cout << "Product: ";
 	std::cout << product;
 	std::cout << "\n";
+	//std::cout << "Reverse: \n";
+	std::vector<int> reverse = reverser(list);
 	//switch (mode) {
 	//case 1:
 	//	output = adder(list);
