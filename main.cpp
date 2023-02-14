@@ -19,6 +19,19 @@ int multer(std::vector<int> list) {
 	return output;
 }
 
+std::vector<int> reverser(std::vector<int> list) {
+	std::vector<int> output;
+	for (int i = list.size() - 2; i >= 0; i--) {
+		output.push_back(list[i]);
+	}
+	std::cout << "Reverser:";
+	for (int i = 0; i < list.size() - 1; i++) {
+		std::cout << output[i];
+	}
+	std::cout << "\n";
+	return output;
+}
+
 int main() {
 	std::vector<int> list;
 	int input = -1;
